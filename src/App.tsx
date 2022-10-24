@@ -1,12 +1,15 @@
-import {Button, defaultTheme, Provider} from '@adobe/react-spectrum'
+import React, {useEffect, useState} from 'react'
+import { ChakraProvider} from '@chakra-ui/react'
 import { Layout } from './components'
+import { connect } from 'socket.io-client'
 
-
-const  App = () => (
-    <Provider theme={defaultTheme}>
+const  App = () => {
+return (
+  <ChakraProvider>
     <Layout />
-  </Provider>
-)
+  </ChakraProvider>
+  )
+}
 
 export default App
 
